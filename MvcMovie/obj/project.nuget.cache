@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HrKZ4Bnjvv6Gb9yPuA1yUNDj2JXgebiwluN1iMSJqkOIWdqtryyaGRH3R/mJzr6eNj6J1RgOi/EEHHXdVbVtZQ==",
+  "dgSpecHash": "lZmJ7BbN1nLJE6rLe+RojoKB5IYoh0FlI5N0pLFO4u9JJCy53Ny3CgSBZsdJRtpfWlSdWKgxxg61YMquLZu3Jg==",
   "success": true,
-  "projectFilePath": "D:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\MvcMovie.csproj",
+  "projectFilePath": "D:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\3.1.9\\microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.9.nupkg.sha512",
     "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

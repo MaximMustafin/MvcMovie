@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\MvcMovie.csproj",
+  "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,72 +14392,52 @@
   "RootNamespace": "MvcMovie",
   "Documents": [
     {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Movies\\Create.cshtml",
-      "TargetPath": "Views\\Movies\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Movies\\Details.cshtml",
-      "TargetPath": "Views\\Movies\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Movies\\Delete.cshtml",
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\Movies\\Delete.cshtml",
       "TargetPath": "Views\\Movies\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Movies\\Index.cshtml",
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\Movies\\Index.cshtml",
       "TargetPath": "Views\\Movies\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\HelloWorld\\Welcome.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Welcome.cshtml",
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\Movies\\Details.cshtml",
+      "TargetPath": "Views\\Movies\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\_ViewImports.cshtml",
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\Movies\\Create.cshtml",
+      "TargetPath": "Views\\Movies\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\HelloWorld\\Index.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\Views\\Movies\\Edit.cshtml",
+      "FilePath": "d:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\Views\\Movies\\Edit.cshtml",
       "TargetPath": "Views\\Movies\\Edit.cshtml",
       "FileKind": "mvc"
     }

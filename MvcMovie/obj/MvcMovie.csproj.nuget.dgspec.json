@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\MvcMovie.csproj": {}
+    "D:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\MvcMovie.csproj": {
+    "D:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\MvcMovie.csproj",
+        "projectUniqueName": "D:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "D:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\MvcMovie.csproj",
+        "projectPath": "D:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
         "packagesPath": "C:\\Users\\Пользователь\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Course 2\\IT\\IT-Homework\\MvcMovie\\obj\\",
+        "outputPath": "D:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Пользователь\\AppData\\Roaming\\NuGet\\NuGet.Config",
