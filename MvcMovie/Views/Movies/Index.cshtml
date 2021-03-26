@@ -1,5 +1,5 @@
-@model MvcMovie.Models.MovieGenreViewModel
-@using System
+@model MvcMovie.Models.MovieQualityViewModel
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -10,17 +10,7 @@
     <p>
         <a asp-action="Create">Create New</a>
     </p>
-    <form asp-controller="Movies" asp-action="Index" method="get">
-        <p>
 
-            <select asp-for="MovieGenre" asp-items="Model.Genres">
-                <option value="">All</option>
-            </select>
-
-            Title: <input type="text" asp-for="SearchString" />
-            <input type="submit" value="Filter" />
-        </p>
-    </form>
 </div>
 
 @* <table class="table">
@@ -76,19 +66,19 @@
 
 <center>
     <hr />
-    <!--<s5221>-->Сортировать по
-    <!--</s>-->: <select class="select_filter">
-        <option value="0" style="color:#A3A3A3;">- Качество -</option>
-        <option value="1">3D</option>
-        <option value="2">4K</option>
-        <option value="3">BluRay</option>
-        <option value="4">Full HD</option>
-        <option value="5">HD</option>
-        <option value="6">SD</option>
-        <option value="7">TS</option>
-        <option value="9">CAMRip</option>
-        <option value="8">MP4</option>
-    </select> · <select class="select_filter">
+    <form asp-controller="Movies" asp-action="Index" method="get">
+        @* <select asp-for="MovieGenre" asp-items="Model.Genres">
+
+            <option value="">All</option>
+            </select> *@
+
+        <!--<s5221>-->Сортировать по
+        <!--</s>-->: <select asp-for="MovieQuality" asp-items="Model.Qualities" class="select_filter"
+            onchange="this.form.submit()">
+            <option value="" style="color:#A3A3A3;">- Качество -</option>
+        </select>
+    </form>
+    · <select class="select_filter">
         <option value="0" style="color:#A3A3A3;">- Год -</option>
         <option value="18">2021</option>
         <option value="17">2020</option>
@@ -121,11 +111,11 @@
                         <div class="shortstoryImg">
 
                             <div class="triangle-topleft-new"><span>@Html.DisplayFor(modelItem => item.Quality)</span></div>
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img title=@posterTitle
+                            <a asp-action="Details" asp-route-id="@item.Id"><img title=@posterTitle
                                     src="~/images/filler.jpg">
                                 <b class="short_itemTitle">
-                                    <span></span></b></a><b class="short_itemTitle"><a
-                                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">@fullTitle
+                                    <span></span></b></a><b class="short_itemTitle"><a asp-action="Details"
+                                    asp-route-id="@item.Id">@fullTitle
                                 </a>
                             </b>
                         </div>
