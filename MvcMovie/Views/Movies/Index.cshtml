@@ -1,5 +1,5 @@
 @model MvcMovie.Models.MovieGenreViewModel
-
+@using System
 @{
     ViewData["Title"] = "Index";
 }
@@ -112,34 +112,39 @@
         <hr />
         <hr />
         <div id="movies">
-            <div class="item-1">
-                <div class="blockItem shortstory">
-                    <div class="shortstoryImg">
+            @foreach (var item in Model.Movies)
+            {
+                string fullTitle = item.Title + " (" + item.ReleaseDate.Year + ") " + item.Quality;
+                string posterTitle = "Poster" + fullTitle;
+                <div class="item-1">
+                    <div class="blockItem shortstory">
+                        <div class="shortstoryImg">
 
-                        <div class="triangle-topleft-new"><span>BluRay</span></div>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
-                                title="Poster Холмс &amp; Ватсон (2018) Blu-Ray Remux 1080p" src="~/images/filler.jpg"
-                                alt="Обложка Холмс &amp; Ватсон (2018) Blu-Ray Remux 1080p">
-                            <b class="short_itemTitle">
-                                <span></span></b></a><b class="short_itemTitle"><a
-                                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">"Tittle" ("Year") "Quality"
-                            </a>
-                        </b>
-                    </div>
-                    <div class="shortstory_info">
-                        <div class="itemStats">
-                            <span class="itemStats_left">
-                                <ion-icon name="eye-outline">
-                                </ion-icon>&nbsp;999
-                            </span>
-                            <span class="itemStats_right">
-                                <ion-icon name="download-outline">
-                                </ion-icon>&nbsp;999
-                            </span>
+                            <div class="triangle-topleft-new"><span>@Html.DisplayFor(modelItem => item.Quality)</span></div>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img title=@posterTitle
+                                    src="~/images/filler.jpg">
+                                <b class="short_itemTitle">
+                                    <span></span></b></a><b class="short_itemTitle"><a
+                                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">@fullTitle
+                                </a>
+                            </b>
+                        </div>
+                        <div class="shortstory_info">
+                            <div class="itemStats">
+                                <span class="itemStats_left">
+                                    <ion-icon name="eye-outline">
+                                    </ion-icon>&nbsp;999
+                                </span>
+                                <span class="itemStats_right">
+                                    <ion-icon name="download-outline">
+                                    </ion-icon>&nbsp;999
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
+
 
         </div>
 </center>

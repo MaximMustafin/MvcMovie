@@ -27,6 +27,7 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("1989-2-12"),
                         Genre = "Romantic Comedy",
                         Rating = "R",
+                        Quality = "Full HD",
                         Price = 7.99M
                     },
 
@@ -36,6 +37,7 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("1984-3-13"),
                         Genre = "Comedy",
                         Rating = "R",
+                        Quality = "CAMRip",
                         Price = 8.99M
                     },
 
@@ -45,6 +47,7 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("1986-2-23"),
                         Genre = "Comedy",
                         Rating = "R+",
+                        Quality = "TS",
                         Price = 9.99M
                     },
 
@@ -54,7 +57,28 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("1959-4-15"),
                         Genre = "Western",
                         Rating = "R",
+                        Quality = "4K",
                         Price = 3.99M
+                    },
+
+                    new Movie
+                    {
+                        Title = "Genesis Code",
+                        ReleaseDate = DateTime.Parse("2020-1-7"),
+                        Genre = "Triller",
+                        Rating = "R",
+                        Quality = "SD",
+                        Price = 4.99M
+                    },
+
+                    new Movie
+                    {
+                        Title = "The Warrant",
+                        ReleaseDate = DateTime.Parse("2020-3-3"),
+                        Genre = "Western",
+                        Rating = "R-",
+                        Quality = "4K",
+                        Price = 4.99M
                     }
                 );
                 context.SaveChanges();
