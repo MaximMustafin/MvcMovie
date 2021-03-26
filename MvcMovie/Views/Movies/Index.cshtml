@@ -1,4 +1,4 @@
-@model MvcMovie.Models.MovieQualityViewModel
+@model MvcMovie.Models.MovieQualityAndReleaseYearViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -77,28 +77,12 @@
             onchange="this.form.submit()">
             <option value="" style="color:#A3A3A3;">- Качество -</option>
         </select>
+        · <select asp-for="MovieReleaseYear" asp-items="Model.ReleaseYears" class="select_filter"
+            onchange="this.form.submit()">
+            <option value="" style="color:#A3A3A3;">- Год -</option>
+        </select>
     </form>
-    · <select class="select_filter">
-        <option value="0" style="color:#A3A3A3;">- Год -</option>
-        <option value="18">2021</option>
-        <option value="17">2020</option>
-        <option value="16">2019</option>
-        <option value="15">2018</option>
-        <option value="14">2017</option>
-        <option value="1">2016</option>
-        <option value="2">2015</option>
-        <option value="3">2014</option>
-        <option value="4">2013</option>
-        <option value="5">2012</option>
-        <option value="6">2011</option>
-        <option value="7">2010</option>
-        <option value="8">2009-2000</option>
-        <option value="9">1999-1990</option>
-        <option value="10">1989-1980</option>
-        <option value="11">1979-1970</option>
-        <option value="12">1969-1960</option>
-        <option value="13">1959-1950</option>
-    </select><span class="sortBlock23">
+    <span class="sortBlock23">
         <hr />
         <hr />
         <div id="movies">

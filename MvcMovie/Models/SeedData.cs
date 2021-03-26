@@ -79,6 +79,26 @@ namespace MvcMovie.Models
                         Rating = "R-",
                         Quality = "4K",
                         Price = 4.99M
+                    },
+
+                    new Movie
+                    {
+                        Title = "Terminator",
+                        ReleaseDate = DateTime.Parse("1986-10-26"),
+                        Genre = "Action",
+                        Rating = "R",
+                        Quality = "FullHD",
+                        Price = 14.99M
+                    },
+
+                    new Movie
+                    {
+                        Title = "Whiplash",
+                        ReleaseDate = DateTime.Parse("2014-10-23"),
+                        Genre = "Drama",
+                        Rating = "R",
+                        Quality = "FullHD",
+                        Price = 17.99M
                     }
                 );
                 context.SaveChanges();

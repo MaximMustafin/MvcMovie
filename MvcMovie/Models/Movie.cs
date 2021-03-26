@@ -32,7 +32,7 @@ namespace MvcMovie.Models
         [Required]
         public string Rating { get; set; }
 
-        [StringLength(30, MinimumLength = 3)]
+        [StringLength(30, MinimumLength = 2)]
         [Required]
         public string Quality { get; set; }
     }

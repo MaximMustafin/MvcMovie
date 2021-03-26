@@ -21,12 +21,16 @@ namespace MvcMovie.Controllers
 
         // GET: Movies
         // GET: Movies
-        public async Task<IActionResult> Index(string movieQuality)
+        public async Task<IActionResult> Index(string movieQuality, int movieReleaseYear)
         {
             // Use LINQ to get list of qualities.
             IQueryable<string> qualityQuery = from m in _context.Movie
                                               orderby m.Quality
                                               select m.Quality;
+
+            IQueryable<int> releaseYearQuery = from m in _context.Movie
+                                               orderby m.ReleaseDate.Year
+                                               select m.ReleaseDate.Year;
 
             var movies = from m in _context.Movie
                          select m;
@@ -36,13 +40,19 @@ namespace MvcMovie.Controllers
                 movies = movies.Where(x => x.Quality == movieQuality);
             }
 
-            var movieQualityVM = new MovieQualityViewModel
+            if (movieReleaseYear != 0)
             {
+                movies = movies.Where(x => x.ReleaseDate.Year == movieReleaseYear);
+            }
+
+            var movieQualityAndReleaseYearVM = new MovieQualityAndReleaseYearViewModel
+            {
+                ReleaseYears = new SelectList(await releaseYearQuery.Distinct().OrderByDescending(x => x).ToListAsync()),
                 Qualities = new SelectList(await qualityQuery.Distinct().ToListAsync()),
                 Movies = await movies.ToListAsync()
             };
 
-            return View(movieQualityVM);
+            return View(movieQualityAndReleaseYearVM);
         }
 
 
