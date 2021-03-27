@@ -21,34 +21,41 @@ namespace MvcMovie.Controllers
 
         // GET: Movies
         // GET: Movies
-        public async Task<IActionResult> Index(string movieGenre, string searchString)
+        public async Task<IActionResult> Index(string movieQuality, int movieReleaseYear)
         {
-            // Use LINQ to get list of genres.
-            IQueryable<string> genreQuery = from m in _context.Movie
-                                            orderby m.Genre
-                                            select m.Genre;
+            // Use LINQ to get list of qualities.
+            IQueryable<string> qualityQuery = from m in _context.Movie
+                                              orderby m.Quality
+                                              select m.Quality;
+
+            IQueryable<int> releaseYearQuery = from m in _context.Movie
+                                               orderby m.ReleaseDate.Year
+                                               select m.ReleaseDate.Year;
 
             var movies = from m in _context.Movie
                          select m;
 
-            if (!string.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(movieQuality))
             {
-                movies = movies.Where(s => s.Title.Contains(searchString));
+                movies = movies.Where(x => x.Quality == movieQuality);
             }
 
-            if (!string.IsNullOrEmpty(movieGenre))
+            if (movieReleaseYear != 0)
             {
-                movies = movies.Where(x => x.Genre == movieGenre);
+                movies = movies.Where(x => x.ReleaseDate.Year == movieReleaseYear);
             }
 
-            var movieGenreVM = new MovieGenreViewModel
+            var movieQualityAndReleaseYearVM = new MovieQualityAndReleaseYearViewModel
             {
-                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                ReleaseYears = new SelectList(await releaseYearQuery.Distinct().OrderByDescending(x => x).ToListAsync()),
+                Qualities = new SelectList(await qualityQuery.Distinct().ToListAsync()),
                 Movies = await movies.ToListAsync()
             };
 
-            return View(movieGenreVM);
+            return View(movieQualityAndReleaseYearVM);
         }
+
+
 
         // [HttpPost]
         // public string Index(string searchString, bool notUsed)
@@ -85,7 +92,7 @@ namespace MvcMovie.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating,Quality")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -117,7 +124,7 @@ namespace MvcMovie.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating,Quality")] Movie movie)
         {
             if (id != movie.Id)
             {
