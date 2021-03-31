@@ -2,8 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using MvcMovie.Data;
-using MvcMovie.Models;
+using MvcMovie.NLayerApp.DAL.EF;
 using System;
 
 namespace MvcMovie

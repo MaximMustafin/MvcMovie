@@ -1,12 +1,12 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using MvcMovie.Data;
+﻿using MvcMovie.NLayerApp.DAL.Entities;
 using System;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace MvcMovie.Models
+namespace MvcMovie.NLayerApp.DAL.EF
 {
-    public static class SeedData
+    public class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
@@ -15,12 +15,12 @@ namespace MvcMovie.Models
                     DbContextOptions<MvcMovieContext>>()))
             {
                 // Look for any movies.
-                if (context.Movie.Any())
+                if (context.Movies.Any())
                 {
                     return;   // DB has been seeded
                 }
 
-                context.Movie.AddRange(
+                context.Movies.AddRange(
                     new Movie
                     {
                         Title = "When Harry Met Sally",

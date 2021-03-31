@@ -1,11 +1,12 @@
-using Microsoft.EntityFrameworkCore;
-using MvcMovie.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using MvcMovie.NLayerApp.DAL.Entities;
 using Microsoft.Extensions.Logging;
 
-namespace MvcMovie.Data
+namespace MvcMovie.NLayerApp.DAL.EF
 {
     public class MvcMovieContext : DbContext
     {
+        public DbSet<Movie> Movies { get; set; }
         public MvcMovieContext(DbContextOptions<MvcMovieContext> options)
             : base(options)
         {
@@ -22,6 +23,5 @@ namespace MvcMovie.Data
                         && level == LogLevel.Information)
                   .AddConsole();
         });
-        public DbSet<Movie> Movie { get; set; }
     }
 }

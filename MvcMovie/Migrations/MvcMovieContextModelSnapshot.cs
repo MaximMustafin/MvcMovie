@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MvcMovie.Data;
+using MvcMovie.NLayerApp.DAL.EF;
 
 namespace MvcMovie.Migrations
 {
@@ -16,41 +16,33 @@ namespace MvcMovie.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9");
 
-            modelBuilder.Entity("MvcMovie.Models.Movie", b =>
+            modelBuilder.Entity("MvcMovie.NLayerApp.DAL.Entities.Movie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Genre")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(30);
+                        .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18, 2)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Quality")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(30);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Rating")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(5);
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(60);
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Movies");
                 });
 #pragma warning restore 612, 618
         }

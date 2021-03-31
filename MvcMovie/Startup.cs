@@ -1,16 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MvcMovie.Data;
+using MvcMovie.NLayerApp.DAL.EF;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Logging;
+using MvcMovie.NLayerApp.BLL.Interfaces;
+using MvcMovie.NLayerApp.BLL.Services;
+using MvcMovie.NLayerApp.DAL.Interfaces;
+using MvcMovie.NLayerApp.DAL.Repositories;
 
 namespace MvcMovie
 {
@@ -42,6 +41,11 @@ namespace MvcMovie
                     options.UseSqlServer(connectionString);
                 }
             });
+
+
+            services.AddScoped<IUnitOfWork, EFUnitOfWork>();
+
+            services.AddScoped<IOrderService, OrderService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

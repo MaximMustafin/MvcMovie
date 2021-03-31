@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "3i9iuPFQAFCA8Xs3cKMiuv3wsmb/SqKyyBmikB+Ll00AwzfcdZwllCWuRJuWOgVLPVyuEgrypyZb2sHirF2iBw==",
+  "success": true,
+  "projectFilePath": "D:\\Study\\Course 2\\IT\\MvcMovie\\MvcMovie\\NLayerApp.BLL\\NLayerApp.BLL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Пользователь\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

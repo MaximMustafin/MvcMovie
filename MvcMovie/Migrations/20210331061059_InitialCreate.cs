@@ -8,28 +8,28 @@ namespace MvcMovie.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Movie",
+                name: "Movies",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Title = table.Column<string>(maxLength: 60, nullable: false),
+                    Title = table.Column<string>(nullable: true),
                     ReleaseDate = table.Column<DateTime>(nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
-                    Genre = table.Column<string>(maxLength: 30, nullable: false),
-                    Rating = table.Column<string>(maxLength: 5, nullable: false),
-                    Quality = table.Column<string>(maxLength: 30, nullable: false)
+                    Price = table.Column<decimal>(nullable: false),
+                    Genre = table.Column<string>(nullable: true),
+                    Rating = table.Column<string>(nullable: true),
+                    Quality = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Movie", x => x.Id);
+                    table.PrimaryKey("PK_Movies", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Movie");
+                name: "Movies");
         }
     }
 }

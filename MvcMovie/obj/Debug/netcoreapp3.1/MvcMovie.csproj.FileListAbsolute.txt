@@ -326,8 +326,6 @@ D:\Study\Course 2\IT\MvcMovie\MvcMovie\bin\Debug\netcoreapp3.1\runtimes\win\lib\
 D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.csprojAssemblyReference.cache
 D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.AssemblyInfoInputs.cache
 D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.AssemblyInfo.cs
-D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.csproj.CoreCompileInputs.cache
-D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.MvcApplicationPartsAssemblyInfo.cache
 D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.RazorAssemblyInfo.cache
 D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.RazorAssemblyInfo.cs
 D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.TagHelpers.input.cache
@@ -352,3 +350,12 @@ D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\staticwebassets\M
 D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.dll
 D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.pdb
 D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.genruntimeconfig.cache
+D:\Study\Course 2\IT\MvcMovie\MvcMovie\bin\Debug\netcoreapp3.1\NLayerApp.BLL\obj\NLayerApp.BLL.csproj.nuget.dgspec.json
+D:\Study\Course 2\IT\MvcMovie\MvcMovie\bin\Debug\netcoreapp3.1\NLayerApp.BLL\obj\project.assets.json
+D:\Study\Course 2\IT\MvcMovie\MvcMovie\bin\Debug\netcoreapp3.1\NLayerApp.DAL\obj\NLayerApp.DAL.csproj.nuget.dgspec.json
+D:\Study\Course 2\IT\MvcMovie\MvcMovie\bin\Debug\netcoreapp3.1\NLayerApp.DAL\obj\project.assets.json
+D:\Study\Course 2\IT\MvcMovie\MvcMovie\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\Study\Course 2\IT\MvcMovie\MvcMovie\bin\Debug\netcoreapp3.1\NLayerApp.WEB\obj\NLayerApp.WEB.csproj.nuget.dgspec.json
+D:\Study\Course 2\IT\MvcMovie\MvcMovie\bin\Debug\netcoreapp3.1\NLayerApp.WEB\obj\project.assets.json
+D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.csproj.CoreCompileInputs.cache
+D:\Study\Course 2\IT\MvcMovie\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.MvcApplicationPartsAssemblyInfo.cache
