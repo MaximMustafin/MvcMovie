@@ -11,6 +11,5 @@ namespace MvcMovie.NLayerApp.BLL.Interfaces
         void CreateMovie(MovieDTO movie);
         void UpdateMovie(MovieDTO movie);
         void DeleteMovie(int id);
-        void Dispose();
     }
 }
