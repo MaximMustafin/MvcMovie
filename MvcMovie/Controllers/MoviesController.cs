@@ -1,39 +1,32 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using MvcMovie.Data;
-using MvcMovie.Models;
+using MvcMovie.NLayerApp.BLL.DTO;
+using MvcMovie.NLayerApp.BLL.Interfaces;
+using MvcMovie.NLayerApp.WEB.Models;
 
 namespace MvcMovie.Controllers
 {
     public class MoviesController : Controller
     {
-        private readonly MvcMovieContext _context;
+        readonly IOrderService orderService;
 
-        public MoviesController(MvcMovieContext context)
+        public MoviesController(IOrderService serv)
         {
-            _context = context;
+            orderService = serv;
         }
 
         // GET: Movies
-        // GET: Movies
         public async Task<IActionResult> Index(string movieQuality, int movieReleaseYear)
         {
-            // Use LINQ to get list of qualities.
-            IQueryable<string> qualityQuery = from m in _context.Movie
-                                              orderby m.Quality
-                                              select m.Quality;
+            IEnumerable<MovieDTO> movies = orderService.GetMovies();
 
-            IQueryable<int> releaseYearQuery = from m in _context.Movie
-                                               orderby m.ReleaseDate.Year
-                                               select m.ReleaseDate.Year;
+            IEnumerable<string> qualityQuery = movies.Select(x => x.Quality);
 
-            var movies = from m in _context.Movie
-                         select m;
+            IEnumerable<int> releaseYearQuery = movies.Select(x => x.ReleaseDate.Year);
 
             if (!string.IsNullOrEmpty(movieQuality))
             {
@@ -47,23 +40,14 @@ namespace MvcMovie.Controllers
 
             var movieQualityAndReleaseYearVM = new MovieQualityAndReleaseYearViewModel
             {
-                ReleaseYears = new SelectList(await releaseYearQuery.Distinct().OrderByDescending(x => x).ToListAsync()),
-                Qualities = new SelectList(await qualityQuery.Distinct().ToListAsync()),
-                Movies = await movies.ToListAsync()
+                ReleaseYears = new SelectList(releaseYearQuery.Distinct().OrderByDescending(x => x).ToList()),
+                Qualities = new SelectList(qualityQuery.Distinct().ToList()),
+                Movies = movies.ToList()
             };
 
             return View(movieQualityAndReleaseYearVM);
         }
 
-
-
-        // [HttpPost]
-        // public string Index(string searchString, bool notUsed)
-        // {
-        //     return "From [HttpPost]Index: filter on " + searchString;
-        // }
-
-        // GET: Movies/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -71,8 +55,8 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var movie = orderService.GetMovie(id);
+
             if (movie == null)
             {
                 return NotFound();
@@ -88,16 +72,14 @@ namespace MvcMovie.Controllers
         }
 
         // POST: Movies/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating,Quality")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating,Quality")] MovieDTO movie)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(movie);
-                await _context.SaveChangesAsync();
+                orderService.CreateMovie(movie);
                 return RedirectToAction(nameof(Index));
             }
             return View(movie);
@@ -111,7 +93,7 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie.FindAsync(id);
+            var movie = orderService.GetMovie(id);
             if (movie == null)
             {
                 return NotFound();
@@ -124,7 +106,7 @@ namespace MvcMovie.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating,Quality")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating,Quality")] MovieDTO movie)
         {
             if (id != movie.Id)
             {
@@ -135,8 +117,7 @@ namespace MvcMovie.Controllers
             {
                 try
                 {
-                    _context.Update(movie);
-                    await _context.SaveChangesAsync();
+                    orderService.UpdateMovie(movie);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -162,8 +143,7 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var movie = orderService.GetMovie(id);
             if (movie == null)
             {
                 return NotFound();
@@ -177,15 +157,19 @@ namespace MvcMovie.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var movie = await _context.Movie.FindAsync(id);
-            _context.Movie.Remove(movie);
-            await _context.SaveChangesAsync();
+            orderService.DeleteMovie(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool MovieExists(int id)
         {
-            return _context.Movie.Any(e => e.Id == id);
+            return orderService.GetMovies().Any(e => e.Id == id);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            orderService.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

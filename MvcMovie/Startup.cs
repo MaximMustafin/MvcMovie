@@ -1,16 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MvcMovie.Data;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Logging;
+using MvcMovie.NLayerApp.DAL.Interfaces;
+using MvcMovie.NLayerApp.BLL.Interfaces;
+using MvcMovie.NLayerApp.DAL.Repositories;
+using MvcMovie.NLayerApp.BLL.Services;
+using MvcMovie.NLayerApp.DAL.EF;
+using Microsoft.AspNetCore.Identity;
 
 namespace MvcMovie
 {
@@ -29,19 +29,27 @@ namespace MvcMovie
         {
             services.AddControllersWithViews();
 
+
             services.AddDbContext<MvcMovieContext>(options =>
             {
-                var connectionString = Configuration.GetConnectionString("MvcMovieContext");
-
                 if (Environment.IsDevelopment())
                 {
-                    options.UseSqlite(connectionString);
+                    options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext"),
+                                   b => b.MigrationsAssembly("MvcMovie"));
                 }
                 else
                 {
-                    options.UseSqlServer(connectionString);
+                    options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext"),
+                                   b => b.MigrationsAssembly("MvcMovie"));
                 }
             });
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<MvcMovieContext>();
+
+            services.AddScoped<IUnitOfWork, EFUnitOfWork>();
+
+            services.AddScoped<IOrderService, OrderService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -63,6 +71,8 @@ namespace MvcMovie
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

@@ -1,0 +1,12 @@
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\obj\Debug\netcoreapp3.1\NLayerApp.BLL.csprojAssemblyReference.cache
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\obj\Debug\netcoreapp3.1\NLayerApp.BLL.AssemblyInfoInputs.cache
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\obj\Debug\netcoreapp3.1\NLayerApp.BLL.AssemblyInfo.cs
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\obj\Debug\netcoreapp3.1\NLayerApp.BLL.csproj.CoreCompileInputs.cache
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\bin\Debug\netcoreapp3.1\NLayerApp.BLL.deps.json
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\bin\Debug\netcoreapp3.1\NLayerApp.BLL.dll
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\bin\Debug\netcoreapp3.1\NLayerApp.BLL.pdb
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\bin\Debug\netcoreapp3.1\NLayerApp.DAL.dll
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\bin\Debug\netcoreapp3.1\NLayerApp.DAL.pdb
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\obj\Debug\netcoreapp3.1\NLayerApp.BLL.csproj.CopyComplete
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\obj\Debug\netcoreapp3.1\NLayerApp.BLL.dll
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.BLL\obj\Debug\netcoreapp3.1\NLayerApp.BLL.pdb

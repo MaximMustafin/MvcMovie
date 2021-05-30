@@ -1,0 +1,5 @@
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\bin\Debug\netstandard2.0\NLayerApp.DAL.deps.json
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\bin\Debug\netstandard2.0\NLayerApp.DAL.dll
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netstandard2.0\NLayerApp.DAL.csprojAssemblyReference.cache
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netstandard2.0\NLayerApp.DAL.AssemblyInfoInputs.cache
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netstandard2.0\NLayerApp.DAL.AssemblyInfo.cs
