@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MvcMovie.NLayerApp.DAL.EF;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Logging;
-using MvcMovie.NLayerApp.BLL.Interfaces;
-using MvcMovie.NLayerApp.BLL.Services;
 using MvcMovie.NLayerApp.DAL.Interfaces;
+using MvcMovie.NLayerApp.BLL.Interfaces;
 using MvcMovie.NLayerApp.DAL.Repositories;
+using MvcMovie.NLayerApp.BLL.Services;
+using MvcMovie.NLayerApp.DAL.EF;
 
 namespace MvcMovie
 {

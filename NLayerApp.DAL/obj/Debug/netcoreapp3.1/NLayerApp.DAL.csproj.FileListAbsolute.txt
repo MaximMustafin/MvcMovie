@@ -1,0 +1,12 @@
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netcoreapp3.1\NLayerApp.DAL.csprojAssemblyReference.cache
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netcoreapp3.1\NLayerApp.DAL.AssemblyInfoInputs.cache
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netcoreapp3.1\NLayerApp.DAL.AssemblyInfo.cs
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netcoreapp3.1\NLayerApp.DAL.csproj.CoreCompileInputs.cache
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\bin\Debug\netcoreapp3.1\NLayerApp.DAL.deps.json
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\bin\Debug\netcoreapp3.1\NLayerApp.DAL.runtimeconfig.json
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\bin\Debug\netcoreapp3.1\NLayerApp.DAL.runtimeconfig.dev.json
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\bin\Debug\netcoreapp3.1\NLayerApp.DAL.dll
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netcoreapp3.1\NLayerApp.DAL.genruntimeconfig.cache
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\bin\Debug\netcoreapp3.1\NLayerApp.DAL.pdb
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netcoreapp3.1\NLayerApp.DAL.dll
+D:\Study\Course 2\IT\MvcMovie\NLayerApp.DAL\obj\Debug\netcoreapp3.1\NLayerApp.DAL.pdb

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "V+yrvW7rK99l2hDzA9DeUxI2PysVa44DQ9w8vcev2elDAlY9WVlq4awOf1h5rk6Y5FKSJd6/9v4mRbFsOCa64A==",
+  "success": true,
+  "projectFilePath": "D:\\Study\\Course 2\\IT\\MvcMovie\\ClassLibrary1\\ClassLibrary1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Пользователь\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
