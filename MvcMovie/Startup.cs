@@ -10,6 +10,7 @@ using MvcMovie.NLayerApp.BLL.Interfaces;
 using MvcMovie.NLayerApp.DAL.Repositories;
 using MvcMovie.NLayerApp.BLL.Services;
 using MvcMovie.NLayerApp.DAL.EF;
+using Microsoft.AspNetCore.Identity;
 
 namespace MvcMovie
 {
@@ -28,20 +29,23 @@ namespace MvcMovie
         {
             services.AddControllersWithViews();
 
+
             services.AddDbContext<MvcMovieContext>(options =>
             {
-                var connectionString = Configuration.GetConnectionString("MvcMovieContext");
-
                 if (Environment.IsDevelopment())
                 {
-                    options.UseSqlite(connectionString);
+                    options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext"),
+                                   b => b.MigrationsAssembly("MvcMovie"));
                 }
                 else
                 {
-                    options.UseSqlServer(connectionString);
+                    options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext"),
+                                   b => b.MigrationsAssembly("MvcMovie"));
                 }
             });
 
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<MvcMovieContext>();
 
             services.AddScoped<IUnitOfWork, EFUnitOfWork>();
 
@@ -67,6 +71,8 @@ namespace MvcMovie
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
